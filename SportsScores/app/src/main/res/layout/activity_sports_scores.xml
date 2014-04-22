@@ -28,9 +28,10 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/date"
-            android:id="@+id/textView" />
+            android:id="@+id/date_text" />
 
         <Button
+            android:id="@+id/game_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/enter_game"
@@ -45,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/team_1"
-                android:id="@+id/textView" />
+                android:id="@+id/team1_text" />
 
             <View
                 android:layout_width="0dp"
@@ -57,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/zero"
-                android:id="@+id/textView" />
+                android:id="@+id/team1_score" />
 
         </LinearLayout>
 
@@ -70,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/team_2"
-                android:id="@+id/textView" />
+                android:id="@+id/team2_text" />
 
             <View
                 android:layout_width="0dp"
@@ -82,13 +83,14 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/zero"
-                android:id="@+id/textView" />
+                android:id="@+id/team2_score" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/next_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/next_game"

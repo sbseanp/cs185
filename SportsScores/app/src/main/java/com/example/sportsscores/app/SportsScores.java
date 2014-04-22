@@ -1,27 +1,28 @@
-package com.example.nbascores.app;
+package com.example.sportsscores.app;
 
 import android.support.v7.app.ActionBarActivity;
-import android.app.Activity;
-import android.app.DialogFragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.content.Intent;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.content.Intent;
+import android.app.Activity;
+import android.app.DialogFragment;
 
-public class NBAScores extends ActionBarActivity {
+public class SportsScores extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nbascores);
+        setContentView(R.layout.activity_sports_scores);
     }
 
 
@@ -29,14 +30,24 @@ public class NBAScores extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.nbascores, menu);
+        getMenuInflater().inflate(R.menu.sports_scores, menu);
         return true;
     }
 
-    public void clearOptions(View v) {
-        Intent intent = Intent.parseUri();
-        finish();
+    public void showDateDialog(View view) {
+        DialogFragment dialog = new DatePickerFragment();
+        dialog.show(getFragmentManager(), "DateDialog");
+    }
 
+    public void showGameDialog(View view) {
+        DialogFragment dialog = new GameFragment();
+        dialog.show(getFragmentManager(), "GameDialog");
+    }
+
+    public void clearOptions(View view) {
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     @Override
