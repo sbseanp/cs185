@@ -32,9 +32,12 @@ public class ColorMeProgrammatically extends ActionBarActivity {
         redButt.setText(R.string.button_red);
         greenButt.setText(R.string.button_green);
         blueButt.setText(R.string.button_blue);
-        redButt.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, 1f));
-        greenButt.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, 1f));
-        blueButt.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, 1f));
+        redButt.setLayoutParams(new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT, 1));
+        greenButt.setLayoutParams(new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT, 1));
+        blueButt.setLayoutParams(new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT, 1));
+        redButt.setBackgroundColor(getResources().getColor(R.color.color_red));
+        greenButt.setBackgroundColor(getResources().getColor(R.color.color_green));
+        blueButt.setBackgroundColor(getResources().getColor(R.color.color_blue));
         
         layout.addView(redButt);
         layout.addView(greenButt);
